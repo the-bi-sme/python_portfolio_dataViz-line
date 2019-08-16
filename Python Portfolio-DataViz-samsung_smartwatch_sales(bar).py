@@ -6,18 +6,18 @@ import matplotlib.pyplot as plt
 
 def main ():
 
-    infile = open('sales.txt','r')
+    in_file = open('sales.txt','r')
 
-    aline = infile.readline()
+    a_line = in_file.readline()
 
-    saleslist = []
+    sales_list = []
 
-    while aline != '':
-        saleslist.append (int(aline))
+    while a_line != '':
+        sales_list.append (int(a_line))
 
-        aline = infile.readline().rstrip('\n')
+        a_line = in_file.readline().rstrip('\n')
 
-    infile.close()
+    in_file.close()
 
     x = [0,10,20,30,40]
 
@@ -30,7 +30,7 @@ def main ():
     plt.ylabel ('REVENUE')
     width = 5
 
-    plt.bar (x,saleslist,width, color = ('r','g','b','k'))
+    plt.bar (x,sales_list,width, color = ('r','g','b','k'))
 
     plt.show()
 
