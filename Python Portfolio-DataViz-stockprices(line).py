@@ -5,37 +5,37 @@ import matplotlib.pyplot as plt
 #visualize data using matplot library
 def main():
 
-    infile = open('stockPrices1.txt','r')
+    in_file = open('stockPrices1.txt','r')
 
-    records = infile.readlines()
-    yearList = []
-    googleList = []
-    amazonList = []
-    microsoftList = []
+    records = in_file.readlines()
+    year_list = []
+    google_list = []
+    amazon_list = []
+    microsoft_list = []
       
 
-    for eachr in records:
-        eachr = eachr.rstrip('\n')
-        values = eachr.split()
+    for each_record in records:
+        each_record = each_record.rstrip('\n')
+        values = each_record.split()
         year = values[0]
-        yearList.append(year)
+        year_list.append(year)
         google = (float(values[1]))
-        googleList.append(google)
+        google_list.append(google)
         amazon = (float(values[2]))
-        amazonList.append(amazon)
+        amazon_list.append(amazon)
         microsoft = (float(values[3]))
-        microsoftList.append(microsoft)
+        microsoft_list.append(microsoft)
 
-    infile.close()
+    in_file.close()
 
     plt.title ('Google-Amazon-Microsoft Stockprices')
     plt.xlabel ('YEAR')
     plt.ylabel ('STOCKPRICE')
     
 
-    plt.plot(yearList, googleList,marker = 'o', label = 'Google')
-    plt.plot(yearList, amazonList,marker = 'o' ,label = 'Amazon')
-    plt.plot(yearList, microsoftList,marker = 'o', label = 'Microsoft')
+    plt.plot(year_list, google_list,marker = 'o', label = 'Google')
+    plt.plot(year_list, amazon_list,marker = 'o' ,label = 'Amazon')
+    plt.plot(year_list, microsoft_list,marker = 'o', label = 'Microsoft')
 
     plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
     plt.grid (True)
