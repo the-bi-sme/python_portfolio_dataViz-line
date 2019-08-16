@@ -3,28 +3,28 @@ import matplotlib.pyplot as plt
 #visualize data using line chart
 def main ():
      
-     inputFile = open('gdp2.txt', 'r')
+     input_file = open('gdp2.txt', 'r')
 
-     records = inputFile.readlines()
-     yearList = []
-     usaList = []
-     chinaList = []
+     records = input_file.readlines()
+     year_list = []
+     usa_list = []
+     china_list = []
 
-     for eachRecord in records:
-        eachRecord = eachRecord.rstrip('\n')
-        values = eachRecord.split()
+     for each_record in records:
+        each_record = each_record.rstrip('\n')
+        values = each_record.split()
         year = int (values[0])
-        yearList.append(year)
+        year_list.append(year)
         usa = float (values[1])
-        usaList.append(usa)
+        usa_list.append(usa)
         china = float (values [2])
-        chinaList.append(china)
+        china_list.append(china)
 
-     inputFile.close()
+     input_file.close()
      
 
-     plt.plot (yearList,usaList, marker='o', label = 'USA')
-     plt.plot (yearList, chinaList ,marker='o', label = 'CHINA')
+     plt.plot (year_list,usa_list, marker='o', label = 'USA')
+     plt.plot (year_list,china_list , marker='o', label = 'CHINA')
 
      plt.xlim (xmin = 2008 , xmax= 2017)
     
