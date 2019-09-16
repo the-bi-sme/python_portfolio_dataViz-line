@@ -1,6 +1,6 @@
 # python_portfolio_data_visualizations
 
-My python scripts showcasing the power of the matplot library for data cleansing and data analysis .
+My python scripts showcasing the power of the matplot library for data cleansing and data analysis
 
 ![samsung_smartwatch_sales](https://user-images.githubusercontent.com/52303723/63189013-8b4fd300-c028-11e9-8ea7-b87441d6700c.JPG)
 
