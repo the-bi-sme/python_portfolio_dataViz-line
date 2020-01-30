@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 #cleanse data
 #visualize data using bar chart
 
-def main ():
+def samsungSales ():
 
     infile = open('sales.txt','r')
 
@@ -34,6 +34,6 @@ def main ():
 
     plt.show()
 
-main()
+samsungSales ()
 
     
